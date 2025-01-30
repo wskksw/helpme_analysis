@@ -1,0 +1,546 @@
+,questionAbstract,aiAnswerText,answerText
+0,Lab 6 Bonus Deadline,"To determine the Lab 6 bonus deadline, check the class announcements for any specific dates mentioned. Remember that bonus marks typically depend on showing your work to a TA before certain deadlines, and it's important to verify if any exceptions apply to Lab 6.","The lab is due on Nov 1. Consequently, the deadline for a 10% bonus is Oct 28, and the deadline for a 5% bonus is Oct 30. You can find the assignment due dates on Canvas."
+1,Course Mark,"You may not be able to see your total weighted grade directly on Canvas, but you can calculate it using the grading components provided. Consider how each section contributes to your overall grade, such as the labs worth 20% and quizzes worth 10%. Check if your course provides a breakdown of marks, and if not, try calculating it by applying the respective weights to your scores.","No – calculation of total grades is disabled for students on Canvas. However, the marking scheme is available [in the syllabus](https://github.com/rlawrenc/cosc_304/tree/main?tab=readme-ov-file#marking-and-evaluation), so you can use that to approximate your final grade if necessary."
+2,Lab 5 Bonus,"To find the deadline for the bonus for Lab 5, you'll want to check the class announcements, as the specific dates may vary. Remember, showing a TA before Monday at 4 p.m. gives a 10% bonus, while before Wednesday at 4 p.m. gives a 5% bonus. Make sure to confirm the exact date for Lab 5 based on when it is assigned!","Bonus deadline for lab 5 is Tuesday, October 15th at 4 p.m. Note that the marking for this take time (5 to 10 minutes) so please plan ahead."
+3,Incorrect Link,"It seems that the link you are trying to access for Lab 7 bonus marks is not working. A good approach would be to check for any announcements or updates on Canvas regarding the lab or bonus features. Additionally, you could explore alternative resources provided in the course material or consult with your classmates to see if anyone has accessed the content. If the issue persists, consider reaching out to your instructor or the course help page for assistance.","You're right — the redirect is broken. Sorry about that. You can access the page by adding the missing slash in the redirect or by clicking the URL below.  
+<https://s342.ok.ubc.ca/rlawrenc/tomcat/Lab7/bonus/shop.html>"
+4,Final Project Questions,"Think about the project paths mentioned in the context. Each stream has specific requirements, and you should consider whether you have the flexibility to choose your own data or if you need to stick to a provided database. Review the project guidelines to clarify this aspect.","For lab 10 and the final deliverable, you can modify the database however you want. It is expected that you will replace the sample data with information about the products you will sell at your particular store."
+8,Final Question,"It's important to remember that during an exam, you can only use approved materials. Since Google Docs is not allowed, downloading notes from there as a PDF would still fall under the category of non-approved resources. Consider reviewing your course materials and creating your own notes on paper instead, if it's a closed book exam. Would you like any tips on how to prepare your notes?","Yes, you can download any notes on your computer to use locally including documents produced on Google Docs."
+9,lab 2 db,"To resolve the ""No database selected"" error, you need to choose a database before creating a table. From the databases listed (testuser, workson, university), refer to the lab instructions or any specific requirements mentioned in your lab 2 assignment. Typically, you might want to use either ""workson"" or ""mydb"" as they are likely designed for your assignments. To select a database, use the command `USE workson;` or `USE mydb;`. Then try creating your table again.","To resolve the ""No database selected"" error, you need to choose a database before creating a table. From the databases listed (testuser, workson, university), refer to the lab instructions or any specific requirements mentioned in your lab 2 assignment. Typically, you might want to use either ""workson"" or ""mydb"" as they are likely designed for your assignments. To select a database, use the command `USE workson;` or `USE mydb;`. Then try creating your table again.
+
+You can use either workson or mydb for lab 2."
+10,Lab 6 Missing Files,It seems like you're referring to a specific file needed for your lab work. You might want to double-check the course's GitHub repository or ask your instructor directly during office hours if the file was indeed provided or if there was an oversight. Remember to look for any updates or announcements regarding the lab materials as well.,Good job starting right away! I was in the process of modifying the GitHub repo. All Python files should now be visible.
+11,Question 16: Using Views & Triggers,"To address whether Joe can update employees in departments with more than 3 employees using views and triggers, consider the following hints:
+
+1. **Views Limitation**: Views are typically used for presenting data and may not provide the necessary filtering for updates based on conditions like employee count.
+
+2. **INSTEAD OF Triggers**: While using an INSTEAD OF trigger can allow updates on views, it generally executes its own SQL statements instead of the user's command. This means that the trigger would need to include logic to restrict updates to only those employees in departments with more than 3 employees.
+
+3. **Complexity**: Implementing such logic in a trigger can be complex and may not directly enforce Joe's access restrictions based solely on the view.
+
+Reflect on these points to determine if combining views and triggers can achieve the intended result.","I like your thinking on this. The answer on the exam is ""No"" as the view (query) to determine the employees in departments that have more than three employees would require a join, grouping, and aggregation. That would make the query not updateable. It would be possible to query that view though and only provide read only access.
+
+Now the question is if you could somehow construct a view using INSTEAD OF and triggers/custom code to make this happen. Well, I guess anything is possible. With the INSTEAD OF, you could intercept the original update command and then determine if the user 'Joe' should be able to update that employee based on the criteria. 
+
+Note however the key point is that as a developer you will be writing all this custom code and implementing your own security policies in code. That is NEVER a good idea. So maybe the best explanation is you cannot enforce the update security restriction using built-in GRANT/REVOKE commands only because that particular view is not updateable."
+12,Lab 5 Astah Use,"It seems you're looking for guidance on using AstahUML for your assignment. A good starting point would be to check if there are any specific resources or guidelines provided in your course material on Canvas. Additionally, consider looking for tutorials that focus on the types of diagrams you might need for Lab 5. If you're still uncertain, you might want to ask your instructor or classmates for their input on which diagram types are most relevant for your assignment.","For AstahUML, you will use the Class Diagram to draw the UML diagram that we are using for database design."
+13,PrairieLearn LV 14.7 and 14.8 ,"For your questions about the queries and their results in LVL 14.7 and 14.8, here are some hints to consider:
+
+1. **LVL 14.7**: Make sure that your `SELECT` statements are correctly structured and that the `JOIN` conditions are valid. Also, check if there are any typos in the column names or table aliases, as these can cause the query to return unexpected results.
+
+2. **LVL 14.8**: Ensure that the `EXCEPT` clause is being used correctly and that both `SELECT` statements return compatible columns. Remember that `EXCEPT` will return rows from the first query that are not in the second.
+
+Double-check your query syntax and the structure of your tables and columns. If the logic is sound but it's still grading incorrectly, there may be specific grading criteria or additional context in the assignment that you need to review.",Both queries are correct. I have manually modified your grade as the PL update fix for these questions does not work if the question has already been started. Good work on these questions.
+14,Where do I find the practice final exam? ,"It sounds like you've done some good searching already! If you can see the answer files in the 'Modules' section, there may indeed be a practice final exam available. I recommend checking other sections within 'Modules' for any labeled resources regarding the practice exam itself. It might be under a different subheading or folder. If you still can't find it, consider reaching out to your instructor for clarification. Keep up the good work!",The practice final exam is in the Quizzes section on Canvas (on the bottom of the page). Here is a [direct link to the practice final exam](https://canvas.ubc.ca/courses/150492/quizzes/790022).
+15,Answer for Lab 1,"It seems like you're asking about the potential discrepancy between the expected output image for Lab 1 and the actual result of the query. To clarify this, consider whether the query you wrote could return more rows than those shown in the image. 
+
+Here are a few hints to guide you:
+
+1. **Review the Query**: Look closely at the conditions specified in your SQL query. Are there any filters (like `WHERE`, `GROUP BY`, etc.) that might limit the results?
+
+2. **Check the Data**: Make sure to examine the data in the relevant tables carefully. Are there any entries that meet the query's criteria but are not represented in the image?
+
+3. **Understand Grouping**: If your query involves grouping, remember that it could condense multiple rows into a single result based on the grouping criteria. 
+
+By considering these factors, you should be able to determine if the image contains all the rows or if there might be more based on your query.",The Lab 1 results are displaying all the rows in the expected output.
+16,Team Members,"It's understandable that finding a partner in a large class can be challenging. One suggestion is to reach out through class discussion forums or group chats to express that you're looking for a partner. You might also consider attending any class events or study sessions where you can meet fellow students who are also seeking partners. This way, you can connect with those who might be in the same situation as you. Remember to adhere to the collaboration guidelines when forming your team!",Please post in the Canvas discussion. I have also made this question public in case others are looking for a partner.
+17,midterm materials confirmation,"To confirm the materials for Midterm Exam #2, you should refer to the course outline or announcements on Canvas. Typically, midterms cover specific lectures, so checking the syllabus can provide clarity on which lectures are included. If you're unsure, consider reaching out to your instructor for confirmation.",The midterm exam is from DB Design (#8) to DB Python programming  (#13). You will need to know SQL. The details are posted on Canvas: https://canvas.ubc.ca/courses/150492/discussion_topics/2388954
+18,Docker Desktop wont run on my laptop,"It sounds like you're encountering compatibility issues with Docker Desktop on your Windows 10 laptop. Here are a few hints to troubleshoot the problem: 
+
+1. **Check System Requirements**: Ensure that your version of Windows 10 is compatible with Docker Desktop. You may need Windows 10 Pro or Enterprise for full support.
+
+2. **Enable Virtualization**: Make sure that virtualization is enabled in your BIOS settings. This is necessary for Docker to run smoothly.
+
+3. **Consider WSL 2**: If you're not already using it, consider enabling Windows Subsystem for Linux (WSL) 2, as Docker Desktop can leverage this for improved compatibility.
+
+4. **Reinstall Docker**: Sometimes, a fresh installation can resolve issues. Ensure to completely uninstall Docker Desktop and then reinstall it.
+
+5. **Consult Documentation**: Check the official Docker documentation for any troubleshooting tips specific to Windows 10.
+
+If you continue to experience issues, it might be helpful to reach out to your course's help desk for further assistance.","This error usually means that you need to enable WSL2 or Hyper-V on your computer. You can find instructions for doing this on Docker's website: https://docs.docker.com/desktop/install/windows-install/#system-requirements You should also ensure that you downloaded the AMD64 installer instead of the ARM64 installer. (Note that you might need the ARM64 installer if your system is ARM-based, but that is unlikely unless you are using a Copilot+ PC.)
+If none of that fixes this issue, consider joining the office hours, and we might be able to sort it out."
+19,midterm format,"For your question about writing relational algebra symbols for selections and projections, remember that you'll typically use specific symbols to represent these operations. 
+
+- For selection (σ), you would use the sigma symbol followed by a condition in parentheses.
+- For projection (π), you would use the pi symbol followed by the attributes you want to keep in parentheses.
+
+Make sure you're familiar with the formatting for both operations as well as how to combine them. It might be helpful to practice writing a few expressions based on the examples you have. Would you like some hints on how to approach the practice midterm questions?",Relational algebra symbols such as selection (σ) and projection (π) can be copied from using the relational algebra editor in either PrairieLearn or Relax.
+20,Automark ER diagram on Midterm,It’s a good idea to check the exam guidelines or ask your instructor directly about specific features like auto-marking on PrairieLearn for the midterm. They would provide the most accurate information regarding exam procedures. Make sure to review your ER diagram concepts before the exam!,The ER diagram is auto-marked on PL. **You are limited to at most 5 submission attempts.**
+21,Are there in person office hours,"The context provided does not mention in-person office hours explicitly. Therefore, I cannot confirm their availability based on the given information.","Good question. There are no in person labs, except for Dr. Lawrence's office hours on Thursday, where you could join via Zoom or in person. The location is Sci 200C"
+22,"Prairie Learn ""broken submission due to error in question code"" ","It seems you are experiencing an issue with code submission in PrairieLearn. Make sure to double-check the following:
+
+1. **Syntax Errors**: Ensure there are no syntax issues in the code you copied over from relaX.
+2. **Compatibility**: Confirm that the code is compatible with PrairieLearn's expected format and requirements.
+3. **Testing**: Run tests locally before submitting to ensure it behaves as expected.
+4. **Documentation**: Refer to PrairieLearn documentation for any specific guidelines or limitations.
+
+If the problem persists, consider reaching out to your instructor or tech support for further assistance.","If you are able to get the output correct, please ignore any automarking issues with PrairieLearn. The assignment is verified by the TAs or instructor when marking. Note also that some answers have different ordering that is also correct and will be marked incorrect by PL."
+24,Why is this a wrong statement,"The statement ""ON UPDATE CASCADE will modify all rows in the primary key table when a value is modified in the foreign key table"" is incorrect. 
+
+Hint: Consider what happens to the foreign key when an update occurs in the primary key table. What does ""CASCADE"" mean in this context?","This statement is incorrect because the ON UPDATE CASCADE action causes a foreign key to be updated when the primary key it references is updated — not the other way around.
+You can find information about referential actions in MySQL's documentation: https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html"
+25,Prairie LV13.4. Consulting department projects,"It looks like you're on the right track with your query, but the error indicates that the table ""proj"" might not exist in your database. Here are a couple of hints to help you troubleshoot:
+
+1. **Check Table Names**: Make sure that the table names you're using match exactly what is in your database schema. Sometimes, they might be named slightly differently (e.g., ""projects"" instead of ""proj"").
+
+2. **Review Table Structure**: If you have access, you can view the structure of the tables to confirm the correct names and their relationships.
+
+3. **Join Condition**: Ensure that the columns you are joining on (like `dno` in your case) are correctly referenced and exist in both tables.
+
+Try checking those aspects, and you might be able to resolve the issue!",I ran it just now on prairie learn again and it worked. Can you check again and verify?
+26,Prairie Learn LV5.12. Loans larger than a deposit account,"It looks like you're trying to write a query to find customer names along with their loan and deposit amounts, specifically for those who have a loan larger than their deposit at the same branch. 
+
+Here are some hints to guide you:
+
+1. **Join Tables**: Make sure you are correctly joining the `borrow` and `deposit` tables based on both the customer name and the branch name. This ensures that you're comparing loans and deposits from the same customer at the same branch.
+
+2. **Filter Condition**: Use a selection (σ) to filter the results where the loan amount is greater than the deposit balance.
+
+3. **Projection**: Finally, when projecting (π) your result, ensure you include the correct attributes: customer name (cname), loan amount (amount), and deposit balance (balance).
+
+By addressing these areas, you should be able to refine your query to get the desired results!","You do not need to join with customer as you have customer name in the borrow relation.
+
+π borrow.cname,borrow.amount,deposit.balance (σ borrow.amount > deposit.balance (deposit ⨝ deposit.cname = borrow.cname and deposit.bname=borrow.bname borrow))"
+27,Lab 3,All AI uses have been used up for today. Please try again tomorrow.,It is likely that the DDL files used to create the sample database were not present when you started Docker. You can run the DDL files using the command-line or SQuirreL to produce the sample databases. The DDL files are at: https://github.com/rlawrenc/cosc_304/tree/main/labs/lab3/setup/ddl
+28,how is the iClicker mark calculated,All AI uses have been used up for today. Please try again tomorrow.,"The iClicker marks are posted in the Gradebook. You need 60 correct iClicker answers to get full marks.
+
+Note that you need to set your student number in iClicker to link your account to Canvas and get your marks posted. I will be updating marks at the end of every week. Do not worry if you do not see a mark yet, as all marks are recorded by iClicker and the Canvas grades will be correct eventually.
+
+The overall quiz mark worth 10% of your grade is calculated by:
+
+(Canvas quiz mark + iClicker Mark + PrairieLearn Live questions) / 200 * 10%. 
+200 total is:
+84 from Canvas quizzes (80% of 105 questions)
+60 is the number of correct answers required in live Clicker quizzes. There will be over 120 questions asked for live clickers.
+56 points from live PrairieLearn questions
+The maximum is 10%. It is not possible to be higher than 10% for the quiz component.
+There is no makeup for any of these quizzes since there are so many questions asked. Do NOT contact the instructor or TA if you miss a class or have technical problems with any of the systems. If you are participating regularly, there should be no problem in getting the 10% for quiz activity."
+29,level 14.7 in prairie learn ,All AI uses have been used up for today. Please try again tomorrow.,"PrairieLearn Live 14.7 had an issue with the auto-grader that has now been fixed. However, PL does not give you a new version of the question after it has been repaired. Please ignore the auto-grader for this question. The answers are posted on Canvas for these questions."
+30,When is midterm #2?,All AI uses have been used up for today. Please try again tomorrow.,Midterm #2 is November 5th. https://github.com/rlawrenc/cosc_304
+31,do I need lockdown browser for the midterm,All AI uses have been used up for today. Please try again tomorrow.,"You will not need Respondus LockDown browser for the midterm — it will be invigilated in class.
+See the Canvas announcement for more information: https://canvas.ubc.ca/courses/150492/discussion_topics/2362031"
+32,"I cannot log into the database at all, why? It was running 10 min ago","It looks like you're encountering a login issue with the database. Here are a few hints to help you troubleshoot:
+
+1. **Database Availability**: Make sure the 'orders' database is online and accessible. If it was running 10 minutes ago, check if it might have gone offline or if there were any changes to its status.
+
+2. **Connection URL**: Double-check the connection URL to ensure that the server name and port are correct. The format looks good, but verify that there are no typos.
+
+3. **User Permissions**: Ensure that the user 'sa' has the appropriate permissions to access the 'orders' database. Sometimes, permissions can be altered or revoked.
+
+4. **Password**: Confirm that the password is correct and hasn't changed since you last logged in successfully.
+
+5. **Firewall or Network Issues**: If you're accessing the database remotely, check for any firewall rules or network issues that might be preventing the connection.
+
+Try these steps to diagnose the problem further!","Your credentials are correct — it seems that the `orders` database does not exist. In that case, you can apply the DDL manually using the instructions in [this video](https://www.youtube.com/watch?v=nT3v29Zg5IQ&list=PLNy6MJ_mI2wVhDpCnJNWdBIOmXXmcR3i_&index=4).  
+You can also try updating the `docker-compose.yml` file [like so](https://github.com/bradanfleming/cosc_304/commit/b355287075e67c6960ecf8e61429280b2f4798b9) and recreating the cosc304-sqlserver container. Note that these instructions will need to be adapted to Lab 7 (e.g., load `orders` instead of `workson`). This is usually easier than installing the DDL manually."
+33,How many tries on ER diagram do we get on the final,"It seems like you’re curious about the number of attempts allowed for the ER diagram on the final exam. While I can't provide the exact number, I suggest checking the course syllabus or asking your instructor directly for clarification. They will have the most accurate information regarding exam policies.",There will be 5 attempts; the same as midterm 2.
+34,Lab 7 - userid and password for SQL Server,"To troubleshoot your connection issue, consider the following hints:
+
+1. **Check Credentials**: The userid and password are typically provided by your instructor or found in your course materials. Make sure you're using the correct ones.
+
+2. **Connection Errors**: If you're still having trouble, remember that errors can also arise from invalid URLs or network issues. Double-check your URL formatting.
+
+3. **Documentation**: Refer to any provided documentation or guidelines specific to your lab for the exact credentials or connection requirements.
+
+If you still can't find the userid and password, try reaching out to your instructor or peers for assistance.","The credentials can be found in the `docker-compose.yml` file.  
+By default, the username will be `sa` and the password will be `304#sa#pw`.  
+If these credentials do not work, it is also possible that the orders database may not exist. In that case, you can apply the DDL manually using the instructions in [this video](https://www.youtube.com/watch?v=nT3v29Zg5IQ&list=PLNy6MJ_mI2wVhDpCnJNWdBIOmXXmcR3i_&index=4).  You can also try updating the `docker-compose.yml` file [like so](https://github.com/bradanfleming/cosc_304/commit/b355287075e67c6960ecf8e61429280b2f4798b9) and recreating the cosc304-sqlserver container. Note that these instructions will need to be adapted to Lab 7 (e.g., load `orders` instead of `workson`)."
+35,Are we allowed to use the Java documentation during the midterm?,"To determine if you can use Java documentation during the midterm, consider the exam format. If it's an open book exam, you can use all course material, but not online or AI resources. If it's closed book, you may only use your personal notes. What does the exam policy specify for your midterm?",You should not need the Java documentation for the midterm. All of the material you would need is in the notes or sample code.
+36,Analysis Lab 10 Typo?,"It seems like there might be a misunderstanding regarding the years in your project features. I suggest reviewing the instructions for both Lab 8 and Lab 10 to clarify what is expected. Pay attention to any patterns in the years mentioned and think about how they relate to the topics covered in each lab. If you're still unsure, consider discussing it with a classmate or reaching out to your TA for confirmation.","The TAs will accept predictions for either 2023+2024 or 2024+2025. If you predict for 2023+2024, you would use the complete data for 2020 to 2022, which is a little easier than doing 2024+2025. If you predict for 2024+2025, you need to have a technique for completing the last 2 months of the 2023 data before you do the prediction. In lab 8, we simply increased 2023 numbers by 20%, but there are other assumptions that you could make."
+37,ReLaX and XML Practice Query Page Exam Usage,"To confirm whether you can use the ReLaX editor and XML practice query page on the final, I recommend checking your course syllabus or any announcements from your instructor regarding exam guidelines. If it's not clear, it might be a good idea to ask your instructor directly for clarification.",Yes you can use the Relax editor and PrairieLearn for the relational algebra questions. You can use the XML query page we used in class for the final exam.
+38,Lab 8 - admin and login page,"To find the username and password for the login and administration page for your lab 8 assignment, consider checking any provided documentation or sample data that might have been included with your lab materials. If you have access to the database, you might also want to look for any predefined user credentials in the appropriate tables beyond just the customers table. 
+
+Additionally, make sure you are using the correct database connection settings as specified in the JDBC URL context. If you need further guidance, think about how the form is structured and where the data might be sourced from in the application.","The username for the [sample website](https://cosc304.ok.ubc.ca/rlawrenc/tomcat/lab8/admin.jsp) is `arnold`, and the password is `test`."
+39,Programming Question,"To determine whether the programming question will use a new DDL or one that can be set up before the exam, think about the context of the previous questions regarding DDL. Consider if the concepts or schemas you've already learned could be applied to the new question. Pay attention to any hints provided by your instructor regarding the topics covered in the exam.",The program questions will use a DDL for a database we have seen previously in the course exercises or labs.
+40,Final Exam Q,"Think about the exam format and the rules regarding approved materials. What type of exam is the final, and what resources are allowed during it? Consider whether the practice final fits into the allowed materials.","Yes, you can use the practice final during the final exam. However, note that the practice final exam will be CLOSED during the exam to prevent students from accidently doing the practice exam. You can download the practice final before it is closed to use during the final."
+41,Lab 10: Analysis Report Document Page Limit,"The 15-page limit for lab reports is generally strict. Exceeding the limit by one or two pages may result in deductions, as it is important to adhere to the specified guidelines. It’s best to check the specific instructions provided for lab 10 or consult with your TA for clarification. Focus on being concise and thorough within the limit to avoid any penalties.","You can go over the 15 page limit, which is only a suggestion. There is no mark penalty for a longer document. The goal with the limit is to provide an indication of the expected length of the document."
+42,Prairie Learn Assessments,"You have until the week after the lab is assigned to complete the lab assignments, but the context does not specify a deadline for in-class assessments on PrairieLearn. As there are no make-ups for forgetting to answer questions, it is advisable to complete them as soon as possible.",The live PrairieLearn questions can be answered any time until the end of class in December for full marks. They are open from when they are asked in class until the end of the semester. The points for the live competition are only available during class time but those have no impact on your grade. Students are encouraged to use the questions as practice for exams and the PrairieLearn overall points will be determined during the last week of class.
+43,TA Office Hours,"The context provided does not specify whether TAs offer in-person office hours. However, it mentions that TA help desk hours are posted, which could imply various formats. You might want to check the posted hours or ask your TA directly for clarity on this.","Dr. Lawrence hosts in-person office hours in SCI 200C on Thursdays. https://github.com/rlawrenc/cosc_304/blob/main/README.md#virtual-drop-in-help-session-hours
+The TAs only have online office hours. However, Kevin can meet students in-person upon request. "
+44,Midterm #1 Questions,"No, you cannot use your iPad or laptop to access GoodNotes during the midterm exam, as only one device is allowed and it must comply with the exam rules. For a closed book exam, you can only refer to your one-page personal notes on paper. Consider transferring your notes to paper to ensure you have them available during the exam.",You can refer to the GoodNotes app on your laptop as long as all the files are local on your computer.
+45,Lab 4: Question 2 (Question Database),,Please attend a help session to get help with this question.
+46,Lab 5 10% bonus,"The deadline for the 10% bonus on lab assignments is typically before the Monday at 4 p.m. following the lab assignment, but it can vary. Make sure to check for any class announcements regarding specific dates for bonus eligibility. What do you think the deadline might be based on the information provided?",The deadline for the 10% bonus is Monday (Oct 21). The deadline for the 5% bonus is Wednesday (Oct 23).
+47,Midterm 1 notes,"Yes, you can use your personal notes for the midterm exam as long as they are on paper and not stored on a cloud service like Google Docs. You might consider printing the notes or writing them down on a single page (two sides) as permitted for closed book exams. Just remember to follow the guidelines regarding approved materials for the exam.","Yes, you can use your personal notes for the midterm exam as long as they are on paper or on your local computer (no Google Docs or other cloud services)."
+48,Lab 4 Prairie learn link error,"It seems you are encountering an access issue with the PrairieLearn link for Lab 4. Here are a few hints to troubleshoot:
+
+1. **Log In**: Ensure you are logged into your UBC account before accessing the link. Sometimes, access restrictions apply if you're not authenticated.
+
+2. **Check Permissions**: Confirm that you have the necessary permissions to access the course materials. This might depend on your enrollment status.
+
+3. **Course URL**: Double-check the course URL provided in your context or any announcements for the correct link. 
+
+4. **Help Resources**: If the issue persists, consider reaching out for help at the provided link: https://help.cosc304.ok.ubc.ca.
+
+Let me know if you need further assistance!",The PL lab 4 and 5 assessments are now public.
+49,Lab 7 due date?,,Lab 7 is due on Nov 18th as specified on Canvas.
+50,bonus lab,"The bonus lab marks are typically awarded based on the performance of the pair, meaning the grade is shared between you and your partner. Consider how collaboration impacts your overall understanding and skills! If you have any specific concerns about how it's graded, you might want to ask your TA for clarification.",The SQL bonus lab is an individual assignment.
+52,Lab 10 Hosting/Marking,"To address your question about Lab 10 and your digital ocean hosting, consider how the lab assignments are structured regarding submission and feedback. Since the lab is already marked, think about whether you might need to refer back to it for future assessments or projects. If the link may be required for rechecking, it might be wise to keep it active for a certain period. However, if you're confident you won't need it again, you can certainly cancel it to save on charges. Just make sure you've reviewed any relevant class guidelines or announcements regarding the lab.","As soon as the lab has been marked, you can stop the hosting."
+53,ER Final exam Q,"It seems you're curious about the format of the ER diagram questions for your final exam. Based on the context, it's important to clarify whether the questions will be presented through PrairieLearn or if they will require hand-drawn diagrams. For the format, think about how previous exams were conducted and whether similar methods might be used again. 
+
+As for drawing them, consider if you have been provided any specific guidelines on the medium for submissions. It might be helpful to check with your instructor for any explicit instructions regarding this. Would you like to further explore what you might need to prepare for the exam?",The ER question will be on PrairieLearn for the final exam.
+54,Can we use db fiddle for sql questions?,You can definitely use tools like DB Fiddle to practice SQL questions. It allows you to write and test SQL queries in a simulated environment. Have you tried exploring its features or creating a sample database there?,You can definitely use tools like DB Fiddle to practice SQL questions.
+55,Can we Use Microsoft Word,"For your exam, remember that the rules state you can only use personal notes on paper for closed book exams. Since Microsoft Word is a digital resource, it wouldn't be allowed. Consider transferring your notes to a printed format to comply with the exam guidelines.",You can use Microsoft Word to view your notes. They do not need to be PDFs.
+56,Here is my docker file for reference,"It looks like you're working with a Docker setup for both MySQL and SQL Server. To better understand your Docker file, consider the following hints:
+
+1. **Services Section**: Each service (like `cosc304-mysql` and `cosc304-sqlserver`) defines a specific database setup. Pay attention to the environment variables for each database, as they set essential parameters like passwords and initial databases.
+
+2. **Volumes**: The volumes section is crucial for data persistence. Notice how the databases are set to store their data on the host machine, which means that even if the containers are stopped, the data remains available.
+
+3. **Networks**: The `networks` section indicates how services communicate with each other. Think about how these aliases might help in connecting your application to the databases.
+
+4. **Command for SQL Server**: The command section for `cosc304-sqlserver` is a bit more complex. It handles waiting for the SQL Server to be ready before executing any scripts. Understanding this part will help you know how to manage service dependencies.
+
+5. **MySQL Connection**: When you connect to MySQL, remember to look for the password in the `docker-compose.yml` file (in your case, it should be `304rootpw`).
+
+Use these hints to review your Docker file and ensure you understand each section's purpose. If you have specific questions about any part, feel free to ask!",One thing I've noticed is that the path to `sqlcmd` isn't up-to-date. You can correct this by making the changes seen [here](https://github.com/bradanfleming/cosc_304/commit/b355287075e67c6960ecf8e61429280b2f4798b9) and recreating the containers (`docker compose down; docker compose up -d`).
+59,Where can i find the prairielearn practice questions?,"You can find the PrairieLearn practice questions in the PrairieLearn platform itself. Make sure to check any announcements or resources provided by your instructor for specific links or instructions on accessing those questions. Additionally, reviewing your course materials and notes may also guide you on where to find practice questions.",All PL answers and answers in the notes are in the Modules section on Canvas. https://canvas.ubc.ca/courses/150492/modules
+60,Lab 5 Due date and Questions,"It sounds like there may be some confusion regarding the due dates and materials for Lab 5. I would recommend checking the official course syllabus or announcements for the most accurate due date, as that should clarify when Lab 5 is due. 
+
+As for the questions, if you find discrepancies between GitHub and PrairieLearn, it might be best to confirm with your TA or instructor which set of questions you should focus on. They can provide the most reliable guidance.","Lab 5 is primarily on GitHub. PrairieLearn only contains the part of lab 5 involving the design. You need to complete all components of lab 5 as specified on GitHub.
+
+Lab 5 is a two week lab from October 7 to 18th. Similar to other labs, it is due the following Friday which is October 25th. 10% bonus by Monday, October 21st and 5% bonus by Wednesday, October 23rd."
+61,Follow up to lab8 login question,"It's great to hear that you've got the login feature working! If you have any further questions or need clarification on something else related to your lab, feel free to ask. Just remember to refer back to the context provided, especially regarding form elements and security implementations.",Congratulations on getting the login feature working! Feel free to ask or join a help session if you have any other questions.
+62,Lab 8 - troubles with login credentials for login.jsp on demo site. ,"It sounds like you're having trouble with the login process on the demo site. One thing to check is whether you're using the correct format for the username and password. 
+
+Consider the following hints:
+1. Make sure the username and password you are entering match the expected format and length specified in the form (8 characters max).
+2. Look for any error messages that might provide clues about what's going wrong. Are you seeing any specific messages after attempting to log in?
+3. Verify if you have the right credentials from the standard DDL, as sometimes they might differ from what you expect.
+
+If you're still stuck, try resetting your input and ensuring there are no extra spaces or characters in your entries.","The username for the [sample website](https://cosc304.ok.ubc.ca/rlawrenc/tomcat/lab8/admin.jsp) is `arnold`, and the password is `test`."
+63,hosting bug,"It sounds like you're facing challenges with your Docker setup on DigitalOcean. Here are a few hints that might help you troubleshoot:
+
+1. **Firewall Rules**: Double-check that the firewall rules allow traffic on the ports used by your Docker containers. Ensure that the necessary ports are open for both incoming and outgoing traffic.
+
+2. **Docker Compose**: After modifying the `docker-compose.yml` file, ensure that the changes are saved, and verify that you are in the correct directory when executing `docker-compose down` and `docker-compose up -d`.
+
+3. **Logs**: Check the logs of your containers with `docker-compose logs` to see if there are any error messages that can guide you in resolving the issue.
+
+4. **Networking**: Make sure the network settings in Docker are correctly configured to allow connections from outside the container.
+
+5. **Documentation**: Refer to the DigitalOcean and Docker documentation for additional troubleshooting steps tailored to their platform.
+
+If you follow these hints and still encounter issues, consider reaching out for specific help at the provided link for support.",Note that if you are trying to host on Digital Ocean that you need at least 2 GB of RAM. The lowest droplet of 1 GB will not run Microsoft SQL Server.
+64,Hosting Solution that worked for me,"It's great to hear that enabling the TCP/IP option resolved your JDBC connection issue! For your assignment, think about how database hosting options might impact connectivity. How does the hosting environment (local, on-premise, or cloud) affect access and configuration? Consider discussing these aspects in your response.","Thank you for that item to check.
+
+Here are other common issues:
+1) Need at least 2 GB RAM if running on Digital Ocean.
+2) Docker file may need modification (especially if you were running on Mac and changed the default SQL Server 2019 image).
+3) Firewall issues.
+
+Please stop by office hours on Friday for help if needed."
+65,Hosting,"It sounds like you're encountering a permissions issue when trying to stop the container. Have you checked if you are running the command with the necessary privileges? You might need to prepend your command with `sudo` if you're on a Unix-like system. Additionally, ensure you are in the correct directory where your `docker-compose.yml` file is located when you run the `docker-compose up -d` command. This should help you manage your containers more effectively.","To work around this, you can either add yourself to the `docker` user group and log in again (e.g., `usermod -aG $USER docker`) or you can prefix the command with sudo. If the container is stopped, then you can remove it with `docker rm cosc304-mysql`."
+66,Converting ER to Relational Final Exam,"It sounds like you're concerned about how your performance on the AutoER tool might affect your overall marks. A good hint here is to check the specific grading policy outlined by your instructor or course materials. Typically, instructors may allow for partial credit based on your own work, even if the AutoER tool did not yield a perfect score. It could be beneficial to ask for clarification on whether you will receive a new ER design or if your own conversion will be evaluated independently.",The question where you design an ER diagram using AutoER on PrairieLearn is separate from the question where you convert an ER diagram to the relational model. Your performance on the ER question has no impact on your ability to answer the convert to the relational model question.
+67,Lab 10 Grading Template Inquiry,,"For any analysis you perform in lab 10, the ""overview of approach with assumptions"" item means that you should explain the high-level goal of what your analysis is trying to achieve and also any assumptions or constraints that affect that analysis. For example, if you were trying to predict the sales 4 years in advance, you may have assumptions that the sales data may be impacted by a growing economy which would result in a 5% boost or that the since you do not have the last few months of 2023 data that ""2023 data will be increased by 20% as there are still 2 months of sales."" We made this assumption on lab 8. There is no ""right"" answer on what the assumptions/constraints are, but as an analyst they should be reasonable/plausible based on what you are trying to achieve."
+68,Notation Inquiry,"The notation ""π A(R)"" refers to the projection operator in relational algebra. It retrieves a set of tuples from relation R, but only includes the attributes specified in set A. Essentially, it filters the relation to show only the columns that are in A, discarding others.","The notation ""π A(R)"" refers to the projection operator in relational algebra. It retrieves a set of tuples from relation R, but only includes the attributes specified in set A. Essentially, it filters the relation to show only the columns that are in A, discarding others."
+69,Lab 1 Question 3 Inquiry,"It seems you're experiencing issues with your SQL query in Lab 1. To improve your query's efficiency and ensure it runs correctly, consider the following suggestions:
+
+1. **Check your Date Format**: Ensure that the date format you are using matches the format in your database.
+
+2. **Simplify Conditions**: Instead of using multiple conditions, you could use a `BETWEEN` clause for the date range to make it more readable.
+
+3. **Use Aliases for Clarity**: Adding aliases to your tables can help make the query easier to understand.
+
+Here’s a refined version of your query:
+
+```sql
+SELECT p.pname, p.price, sp.amount
+FROM Shipment s
+JOIN ShippedProduct sp ON s.shipment_id = sp.shipment_id
+JOIN Product p ON sp.product_id = p.product_id
+WHERE s.shipdate BETWEEN '2012-06-01' AND '2014-12-21'
+AND p.price < 40 
+AND sp.amount > 4;
+```
+
+This version retains your original logic but simplifies the date condition and improves readability. If you continue to receive errors, double-check the table and column names for correctness.","The answer is correct. You can show the TA and he will mark it. Unfortunately, PrairieLearn will timeout some grading of questions if they take to long even if the answer is correct."
+72,Lab 1 Question 3 Inquiry,"In your attempt to use dates in relational algebra, your syntax for the date comparison is close but needs clarification. The correct way to express the condition for the date range in relational algebra is to separate the comparisons with logical AND (∧) instead of trying to combine them in a single expression.
+
+For your query, you should write:
+
+\[ 
+σ(Date('2012-06-01') < shipdate ∧ shipdate < Date('2014-12-21') ∧ price < 40 ∧ shipped\_amount > 4)(Products) 
+\]
+
+This ensures that each condition is applied correctly. Make sure you replace ""Products"" with the actual relation name you're working with. If you continue to face issues, check that the attribute names (like `shipdate`, `price`, and `shipped_amount`) are spelled correctly and match your schema.","In your attempt to use dates in relational algebra, your syntax for the date comparison is close but needs clarification. The correct way to express the condition for the date range in relational algebra is to separate the comparisons with logical AND (∧) instead of trying to combine them in a single expression.
+
+For your query, you should write:
+
+\[ 
+σ(Date('2012-06-01') < shipdate ∧ shipdate < Date('2014-12-21') ∧ price < 40 ∧ shipped\_amount > 4)(Shipment) 
+\]
+
+The key point is that you cannot make a condition like this:
+
+Date('2012-06-01') < shipdate < Date('2014-12-21')
+
+You must separate it into two conditions connected with an AND:
+
+Date('2012-06-01') < shipdate AND shipdate < Date('2014-12-21')
+"
+73,Lab 1 Question 4 Inquiry,"The condition you provided, ""(σ((inventory*0.3)≤amount) (Product⨝ShippedProduct⨝Customer))"", may not work due to the following reasons:
+
+1. **Data Type Issues**: Ensure that the 'inventory' and 'amount' fields are of compatible data types for comparison. If one is a string, the comparison may not execute as expected.
+
+2. **Join Conditions**: Verify that the joins between the tables (Product, ShippedProduct, and Customer) are correctly set up. If the joins are not returning the expected rows, the condition may seem ignored.
+
+3. **Filtering Logic**: The filtering condition may not yield any results if no records meet the criteria of having a shipment amount at least 30% of the current inventory. Check if there are rows in the joined dataset that satisfy this condition.
+
+4. **Execution Environment**: Sometimes, the execution environment (such as SQLite in PrairieLearn) may have limitations or specific behaviors. Make sure that the database is set up correctly and that there are no issues with the query execution.
+
+Review these points to troubleshoot why the condition appears to be ignored.","The condition you provided, ""(σ((inventory*0.3)≤amount) (Product⨝ShippedProduct⨝Customer))""
+
+does not work because you are not joining with Shipment. There are no fields in common between ShippedProduct and Customer."
+75,Lab 6 Return ResultSet Issue,"To return a `ResultSet` from your `query1()` method, you need to ensure that the `ResultSet` object is accessible outside the `try` block where it's created. One way to achieve this is to declare the `ResultSet` variable outside the `try` block. This way, you can return it after the `try-catch` structure.
+
+Here's a hint on how to adjust your code:
+
+1. Declare the `ResultSet` variable before the `try` block.
+2. Initialize the `ResultSet` inside the `try` block.
+3. Ensure that you're returning the `ResultSet` only after the `try` block, while managing any potential resource issues.
+
+This approach will allow you to return the `ResultSet` as needed. Consider how to handle closing the `ResultSet` properly to avoid resource leaks.","You do not need a `try-catch` for `query1()`. Write your SQL, create a statement, execute your query and return the result like this:
+
+```
+String sql = ""SELECT ..."";
+Statement stmt = con.createStatement();
+return stmt.executeQuery(sql);    
+```"
+77,Help fixing docker,"It sounds like there might be an issue with your Docker container setup. Here are a few hints to help you troubleshoot:
+
+1. **Check Dockerfile**: Ensure that the necessary tools are installed in your Docker image. The error suggests that `sqlcmd` is missing, which might indicate an incomplete installation.
+
+2. **Inspect Docker Compose Configuration**: Look at your `docker-compose.yml` file for any misconfigurations that might prevent the tools from being installed correctly.
+
+3. **Rebuild the Container**: Sometimes, rebuilding the container can resolve issues. You can try running `docker-compose down` followed by `docker-compose up --build`.
+
+4. **Logs**: Check the logs for any errors during the startup process by running `docker-compose logs`.
+
+If you still have issues, consider reaching out for more specific guidance based on your setup.","It seems that you're running `docker compose up` instead of `docker compose up -d`. In that case, the containers will run in the foreground, and it is expected for the command to not finish running.  
+To fix the path error, you can update the `docker-compose.yml` file [like so](https://github.com/bradanfleming/cosc_304/commit/b355287075e67c6960ecf8e61429280b2f4798b9) and recreate the cosc304-sqlserver container. This should correct the paths and fix the auto-loading of the DDL. You may also choose to ignore them, create an empty `orders` database, and use the `loaddata` page to install the DDL.  
+Note that these instructions will need to be adapted to the lab you're completing, and you'll need to use the original SQL Server image rather than Azure SQL Edge."
+78,Are Live Assessments in PrairieLearn counted for marks?,"Yes, live questions in PrairieLearn are counted for marks as part of the overall quiz component, which contributes to 10% of your overall grade. The grading scheme includes points from live questions alongside Canvas quizzes and iClicker questions.","Yes, live questions in PrairieLearn are counted for marks. 
+
+The overall quiz mark worth 10% of your grade is calculated by:
+
+(Canvas quiz mark + iClicker Mark + PrairieLearn Live questions) / 200 * 10%
+
+200 total is:
+- 84 from Canvas quizzes (80% of 105 questions)
+- 60 is the number of correct answers required in live Clicker quizzes. There will be over 120 questions asked for live clickers.
+- 56 points from live PrairieLearn questions
+
+The maximum is 10%. It is not possible to be higher than 10% for the quiz component.
+
+There is no makeup for any of these quizzes since there are so many questions asked. Do NOT contact the instructor or TA if you miss a class or have technical problems with any of the systems. If you are participating regularly, there should be no problem in getting the 10% for quiz activity."
+80,Midterm #1 Cutoff,"To find the cutoff for Midterm #1, you should review the lecture slide decks covered before that midterm. Pay attention to the dates and content of the lectures leading up to the midterm. Check your course schedule or announcements for any specific guidance on which slides are included.","As stated in the Canvas announcement describing the exam, the exam is up to and including SQL. There is nothing on DB design on midterm 1."
+81,materials covered in Midterm#2,"For midterm #2, you might want to review the topics covered after midterm #1, as the exam will likely focus on that material. As for the format, think about the types of questions you've encountered in class and assignments—these often give a good indication of what to expect. Pay attention to the balance between multiple-choice questions and practical coding or SQL tasks. You can also check the Canvas announcements for more specific details as the exam date approaches.",See the post on Canvas for details.
+82,Final Exam,"It sounds like you're preparing for your final exam. Based on the context provided, you might want to consider how the ER diagram and the relational schema conversion are related. 
+
+Think about the process of converting an ER diagram into a relational schema—what steps you need to take and if they could be grouped as one question or if they might be assessed separately. 
+
+To clarify, you should review the specific instructions for your final exam, as they usually outline the format of the questions. If you have any more specific questions about the content or process, feel free to ask!",The ER diagram is done on PrairieLearn. The convert ER to relational is on Canvas. They are separate questions.
+83,Normalization Slide 31,"It sounds like you are encountering a common issue when normalizing to BCNF where dependencies keep affecting the keys. To address this, consider analyzing each functional dependency carefully. 
+
+1. Identify the candidate keys for the schema.
+2. Check each functional dependency against the candidate keys to determine if any violate BCNF.
+3. When you find a violation, think about how to decompose the relation further.
+
+For your specific case, focus on how the changes you make to the keys might affect other functional dependencies. Remember, the goal is to eliminate partial and transitive dependencies that lead to BCNF violations. 
+
+Keep trying to break down the dependencies step by step!","On slide #31, performing the normalization of StudentCourse there are two candidate keys of that initial relation:
+
+1) (sid, cnum)
+2) (ssn, cnum)
+
+You will get two different but equivalent answers if you either take fd2 or fd3 out first.
+
+Remove fd2 first (as ssn is not a candidate key of StudentCourse):
+Student (ssn {PK}, sid)
+StudentCourse (ssn {PK}, cnum {PK}, grade)
+
+Remove FD3 first:
+Student (sid {PK}, ssn)
+StudentCourse (sid {PK}, cnum, grade)
+
+Both are equivalently correct according to normalization. 
+
+Note that in either case once you remove the FD and separate into two relations that both fd2 and fd3 are satisfied because there are two candidate keys for student: 1) (sid)  2) (ssn)."
+84,Practice 22.1: Normalization Q1,"To address your question about normalization and the attribute closure, consider the following hints:
+
+1. **Attribute Closure**: When you compute the closure of a set of attributes (like G in your case), think about how that closure relates to the functional dependencies you have. It helps to identify which attributes can be derived from others.
+
+2. **Determining Relations**: When normalizing to BCNF, ensure that every functional dependency satisfies the condition that the left-hand side is a superkey. If you find any violations, you may need to decompose the relations further.
+
+3. **Final Relation Count**: After normalization, list all the relations you’ve obtained and count them. Each relation will represent a unique set of attributes that satisfy BCNF.
+
+Keep these points in mind while you analyze your schema and functional dependencies. If you need more guidance, think about the implications of each functional dependency and how they relate to your relations!","I am not sure what question you are referring too.
+
+In short, yes you remove all attributes in the closure and leave the LHS in the relation in order to allow a later join.
+"
+85,Docker in Labs,"You don't necessarily need to delete previous lab's Docker containers and volumes for each lab. However, it's a good practice to manage them to avoid confusion and free up space. You may want to check the lab instructions for any specific recommendations regarding cleanup.","You don't necessarily need to delete previous lab's Docker containers and volumes for each lab. However, it's a good practice to manage them to avoid confusion and free up space. You may want to check the lab instructions for any specific recommendations regarding cleanup.  
+In addition, DDL is often loaded when the container is started. If your lab depends on the database being initialized a certain way (e.g., Lab 6), it's usually easier to just delete and re-create a container (e.g., cosc304-mysql) than it is to manually load a lab's DDL."
+86,Naming fields in Lab 2,"In Lab 2, it’s generally a good practice to follow the naming conventions provided in your assignment. This ensures consistency and clarity in your database. However, if the instructions allow for flexibility in naming, you can choose names like ""aname"" and ""iname"" as long as they are clear and meaningful. It might be helpful to refer to the specific guidelines given in your lab instructions to determine the best course of action.",You should use the field names provided in the lab instructions.
+87,(development) Lab 8 new files to add to lab 7,"To determine which specific files you need to copy from Lab 8 to Lab 7, consider the purpose of the files. Are there any new functionalities or updates in Lab 8 that would enhance Lab 7? You might want to check the instructions or comments in the code to see which files are essential for your lab's objectives. It may not be necessary to overwrite all files—focus on the ones that are relevant to your lab work. If you're unsure, discussing it with your lab partner or TA could provide clarity.",Only copy over the new files. Keep all the existing files that you have from lab 7. See [https://github.com/rlawrenc/cosc_304/tree/main/labs/lab8/develop](https://github.com/rlawrenc/cosc_304/tree/main/labs/lab8/develop) point #3.
+88,Lab 8,"It sounds like you may have encountered issues with your connections after pushing your changes to GitHub. Here are some hints to help you troubleshoot:
+
+1. **Check Database Connection**: Ensure that your database connection settings in your PHP code are still correct after the changes. 
+
+2. **Review Your Code**: Look for any changes you made when adding Git that might have affected your database connection (e.g., file paths or configuration settings).
+
+3. **Error Messages**: Pay attention to any error messages that appear when you try to connect. They can give you clues about what might be wrong.
+
+4. **Local Environment**: Make sure your local environment is set up correctly, especially if you're using Docker for database deployment.
+
+5. **GitHub Settings**: If you are using GitHub Pages or similar, ensure that your server setup matches the requirements for connecting to your database.
+
+Try these steps, and if you're still having issues, consider reaching out for more specific help based on the errors you encounter.","Interesting — creating a git repository shouldn't have done that.  
+I would recommend checking Docker and ensuring that all containers are running. You can also check the `cosc304-sqlserver` logs to see if there are any authentication issues. Also ensure that you connect to `cosc304_sqlserver` rather than `localhost` from within the container — Docker containers won't have access to servers on your host network. You can also run `docker compose up --force-recreate` to force Docker to recreate the Docker network if necessary.
+
+If none of that solves the issue, I'd recommend joining a virtual help session — we might be able to figure it out."
+89,PrairieLearn ER diagram,"It seems the question is asking about the number of attempts for the ER diagram in the context of PrairieLearn. While the provided context doesn't specify the number of attempts directly, you might want to refer to any course materials or guidelines regarding attempts for assignments or assessments. Typically, this information would be outlined in your syllabus or assignment details.",There will be 5 attempts; the same as midterm 2.
+90,Lab 4 submission,"It sounds like you're trying to ensure your name is visible in your screenshot while also capturing the marking. Here are a couple of hints:
+
+1. **Screenshot Technique**: You might want to take two screenshots—one that shows your marking and another that clearly shows your name. Then, you can combine them into one image or submit them separately if that's allowed.
+
+2. **Scrolling**: If the marking is below your name, consider resizing your window or adjusting the display settings to capture both in one screenshot without needing to scroll.
+
+Remember to follow the lab submission guidelines closely!","For PrairieLearn submissions, it is not necessary to screenshot the output of your answer itself. If you open the summary page of your assignment and screenshot from the top-right corner of the page to the bottom-left corner of your summary, you should be able to get both your question grades and your name in the screenshot."
+91,Bug in pirarielearn practice 11.6 medium random query 1,"It seems you're experiencing a bug related to the query structure and the way the tables are joined. To troubleshoot, consider:
+
+1. **Check the Join Conditions**: Ensure that the join between the `hotel` and `manufacturer` tables is correctly specified. Look for common keys that should be used for joining.
+
+2. **Simplify the Query**: Try breaking down the query into simpler parts. For example, test the conditions separately to see if they work individually before combining them.
+
+3. **Review the Filter Criteria**: Make sure the conditions applied (like dates and numerical comparisons) are valid and in the correct format.
+
+4. **Consult Documentation**: If you're using a specific platform like PrairieLearn, check if there are known issues or specific syntax requirements for queries.
+
+These steps might help in identifying the issue with the query. If you need further assistance, consider providing the actual query you're struggling with.","Unfortunately, I can't reproduce this bug. I would recommend performing a hard reload (Ctrl+Shift+R) on the page or opening the question in a private tab. If that doesn't solve the issue, we might be able to figure it out in a virtual help session."
+92,A fix for Lab 7 Docker container failing to run sqlcmd ,"It looks like you've found a solution to your issue with the SQL command line tool in your Docker container. Great job on troubleshooting and sharing your findings! 
+
+Just a hint for others who might face similar problems: always ensure that paths and versions in the `docker-compose.yml` file correspond to the actual directories in the container. Also, checking the logs can provide vital clues for resolving access issues with databases. 
+
+If anyone is unsure about the flags to use with `sqlcmd`, they might want to look up the command's documentation for details on what each flag does.","That is correct — it seems that Microsoft updated the structure of their Docker image since last year. Apologies for the inconvenience. Anyone curious about what these changes should look like can see [this patch](https://github.com/bradanfleming/cosc_304/commit/b355287075e67c6960ecf8e61429280b2f4798b9) for reference.
+
+If the DDL fails to load automatically, it can also be installed manually by following the instructions in [this video](https://www.youtube.com/watch?v=nT3v29Zg5IQ&list=PLNy6MJ_mI2wVhDpCnJNWdBIOmXXmcR3i_&index=4) if all else fails."
+93,Docker Installation,"To fix the issue with Docker not running on your Windows PC, ensure that your system meets the following requirements:
+
+1. **Windows Version**: Docker Desktop requires Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later). If you are using Windows Home, you may need to enable WSL 2 (Windows Subsystem for Linux) and install Docker Desktop for WSL 2.
+
+2. **Hardware Virtualization**: Make sure that hardware virtualization is enabled in your BIOS settings.
+
+3. **System Updates**: Ensure that your Windows is up to date, as outdated systems may have compatibility issues.
+
+4. **Download the Correct Version**: Verify that you downloaded the correct version of Docker Desktop for your operating system from the official Docker website.
+
+If these steps do not resolve the issue, consider checking Docker's official documentation or forums for additional troubleshooting tips.","This error usually means that you need to enable WSL2 or Hyper-V on your computer. You can find instructions for doing this on Docker's website: https://docs.docker.com/desktop/install/windows-install/#system-requirements
+You should also ensure that you downloaded the AMD64 installer instead of the ARM64 installer. (Note that you might need the ARM64 installer if your system is ARM-based, but that is unlikely unless you are using a Copilot+ PC.)"
+94,Lab 2 submission,"You can submit Lab 2 through the designated submission platform before the due date. Remember, no late submissions will be accepted, and you can hand it in anytime before the deadline for immediate feedback from the TA. If you need further assistance, check the TA help desk hours.",Put all your SQL DDL statements in a text file. Submit the text file on Canvas or show the answer to a TA in a help session.
+96,How do you get bonus marks for lab 1?,"To earn bonus marks for lab 1, you should complete all lab assignments as they not only contribute to your marks but also practice essential skills. Additionally, participating actively in class, preparing by reading notes beforehand, and practicing more questions outside of labs can enhance your overall performance, which may indirectly lead to better marks. However, specific bonus opportunities for lab 1 are not mentioned in the provided context.","To earn bonus marks for lab 1, you should join labs early. All labs are due on friday, if you hand it in in labs on MONDAY, you get 10%, if you hand it in the labs on WEDNESDAY, you get 5 % extra mark"
+97,Lab 7 issue,"It sounds like you're encountering a login issue with the MySQL user. Here are some hints to help you troubleshoot:
+
+1. **Check the Credentials**: Make sure you’re using the correct username and password. The password for the 'root' user can be found in the `docker-compose.yml` file.
+
+2. **Database Connection**: Ensure that you are connecting to the correct database instance. You might want to verify the container is running properly with `docker-compose ps`.
+
+3. **User Permissions**: If you are trying to use 'sa', ensure that this user is correctly set up in your MySQL database. You might want to connect as 'root' and check user privileges.
+
+4. **Logs**: Check the logs of your MySQL container for any error messages that could provide more information on the connection failure. You can do this by running `docker logs <container_name>`.
+
+If you follow these steps, you should be able to identify the issue. Good luck!","This most likely occurred because the DDL for the `orders` database wasn't loaded properly. When you attempt to log into a non-existent database, MS SQL Server generally displays it as an authentication error. You can confirm that this is the case by viewing the Docker logs for `cosc304-sqlserver`.
+
+To fix this, you can apply the DDL manually using the instructions in [this video](https://www.youtube.com/watch?v=nT3v29Zg5IQ&list=PLNy6MJ_mI2wVhDpCnJNWdBIOmXXmcR3i_&index=4). You can also try updating the docker-compose.yml file [like so](https://github.com/bradanfleming/cosc_304/commit/b355287075e67c6960ecf8e61429280b2f4798b9) and recreating the cosc304-mysql container. Note that both of these will need to be adapted to Lab 7 (e.g., load orders instead of workson).
+
+If none of that works, I would recommend joining a virtual help session — we might be able to figure out the problem."
+98,Lab 5 - ER diagram state,"To determine if you can revert to a previous state of your ER diagrams in PL, you might want to check if the platform has a version control feature or an autosave function. Look for any documentation or help sections that mention history or version management. This could provide you with the information you need.",It is not possible to revert to a previous ER diagram in PL.
+99,Python packages for midterm,,It would be okay to use a different Python mysql package for the midterm exam.
+101,Lab 7,"It sounds like you’re facing multiple issues with your assignments. Here are some hints to help you troubleshoot each problem:
+
+1. **NodeJS Connection Error**: The error message indicates a permissions issue. Double-check the user credentials and permissions in your database setup. Make sure the user `sa` has the necessary permissions for the database you're trying to access.
+
+2. **PHP Docker Container**: If the PHP container is stuck on ""exited,"" check the logs for any error messages. You can view the logs by running `docker-compose logs [service_name]`. This can give you clues about what might be going wrong.
+
+3. **Java Loaddata File**: If the JSP file is displaying as text, ensure that your server is correctly configured to handle JSP files. Check that your web server (like Tomcat) is running properly and that your deployment settings are correct.
+
+Remember to verify your Docker setup and configurations for each environment as well. Good luck!","If the connection is failing in all containers, it is most likely because the `orders` database does not exist. You can confirm this by reading the docker logs for the cosc304-sqlserver container.  
+If this is the case, you can install the DDL manually by following the instructions in [this video](https://www.youtube.com/watch?v=nT3v29Zg5IQ&list=PLNy6MJ_mI2wVhDpCnJNWdBIOmXXmcR3i_&index=4). You can also try updating the docker-compose.yml file [like so](https://github.com/bradanfleming/cosc_304/commit/b355287075e67c6960ecf8e61429280b2f4798b9) and recreating the cosc304-mysql container."
+102,8 November class recording,"It seems like you're experiencing an issue with accessing the class recording for November 8. Have you checked if there's a specific announcement or an update in Canvas regarding that recording? Sometimes, recordings may be posted later or there could be technical issues. You might also want to reach out to your instructor or tech support for assistance.",The lecture for November 7th in now posted.
+103,Topics included in the final,"In the context of the final exam review, it's important to focus on the topics that have been explicitly covered throughout the course. While hosting, data warehousing, and transactions are mentioned, you might want to double-check the course outline or your notes to identify the key topics that are emphasized for the final exam. Consider what has been highlighted during your recent classes and project presentations, as those may provide clues about what to focus on for the exam.","Topics such as data warehousing, transactions, hosting, and other smaller topics may be in multiple choice or smaller questions but are not one of the large questions explicitly mentioned that will be on the exam."
+104,Relational Algebra Practice Lab1 Q.8,"To find all authors who have written more than one book using relational algebra, you can follow these steps:
+
+1. **Select all rows from the authors' books relation** (assuming the relation is named `Books` with attributes `Author` and `Book`).
+2. **Group by Author** and count the number of books for each author.
+3. **Select authors with a count greater than 1**.
+
+Here’s a sample relational algebra expression:
+
+1. **Group and count**:
+   \[
+   G = \gamma_{Author, COUNT(Book) \rightarrow BookCount}(Books)
+   \]
+
+2. **Select** authors with more than one book:
+   \[
+   Result = \sigma_{BookCount > 1}(G)
+   \]
+
+This would give you the authors who have written more than one book. The specific syntax may vary based on your database system, but the concept remains the same.","To find all authors who have written more than one book using relational algebra without using a GROUP BY operator, join the BookAuthor relation with itself on (firstName, lastName) and the ISBNs are not the same.
+
+Answers are here: https://github.com/rlawrenc/cosc_304/tree/main/labs/lab1/practice "
+105,Issue with coding space of lab practice,"The error in your query may stem from the use of the assignment operator (←) instead of the correct syntax for your database interaction in R or SQL. Make sure you are using the appropriate functions for querying and assigning results in your specific programming environment. If you're using R, you may want to use the `dplyr` package to handle such queries.","For assignment in PrairieLearn and ReLaX editor, use the = sign not ←.
+Example:
+result = π Book.isbn (Book)
+result"
+106,Solution for LV 14.8,"To analyze the provided SQL query, consider the following hints:
+
+1. **EXCEPT Clause**: The `EXCEPT` operator is used to return rows from the first query that are not present in the second query. Make sure that both queries have the same number of columns and compatible data types.
+
+2. **Join Logic**: In your first query, you're joining the `emp` table to itself using `supereno` and `eno`. This part seems correct if you're trying to find employees supervised by someone.
+
+3. **Second Query**: The second part of the query involves a join between the `emp` and `dept` tables. Check if the column you're selecting (`ename`) from the second query matches the column type of the first query.
+
+4. **Column Alignment**: Ensure that both selected columns (from the first and second query) are the same in terms of their data type and structure.
+
+5. **Purpose**: Think about the logic of what you want to achieve. Are you trying to find employees who are supervised but not managers? Clarifying your intent might help refine the query.
+
+By reviewing these points, you should be able to identify what might be wrong with your query and how to fix it.","Your answer is correct. An issue with the auto-grade was resolved.
+"
+107,Question regarding lab 1 q4,"To address the issue with your query, ensure that the condition for filtering based on the state and amount is correctly applied. According to your context, it seems you want to exclude any results that do not meet the criteria of `amount` being greater than 30% of `inventory` specifically for each state.
+
+You might want to adjust your query to ensure the logical conditions are correctly structured. Instead of using an OR (`∨`), use an AND (`∧`) to ensure that the condition applies to each state separately. Here’s a refined approach:
+
+```sql
+SELECT pname, inventory, amount, state
+FROM Product
+JOIN ShippedProduct ON Product.id = ShippedProduct.product_id
+JOIN Customer ON ShippedProduct.customer_id = Customer.id
+JOIN Shipment ON ShippedProduct.shipment_id = Shipment.id
+WHERE amount >= (0.3 * inventory)
+AND state IN ('CA', 'IA')
+```
+
+This query will return products where the `amount` is greater than or equal to 30% of `inventory` and is limited to the states of California (CA) and Iowa (IA). If you still see unexpected results, double-check your data for any entries that might not meet your expectations.","You need to group the OR clause with parenthesis due to order of operations.
+
+πpname,inventory,amount,state σ amount ≥ (0.3*inventory) ∧ (state='CA'∨ state='IA') (Product⨝ShippedProduct⨝Customer⨝Shipment)
+
+"
+108,Zoom office hours/lab,The context provided does not include information about a Zoom office hours passcode. Please check with your instructor or course materials for the specific passcode.,You should not need the meeting passcode to access the Zoom meeting because it is embedded in the invite link. You can find the invite links in the queue description or in the Zoom tab on Canvas: https://canvas.ubc.ca/courses/150492/external_tools/15408
+109,Squirrel Setup,"It sounds like you're on the right track, but the JDBC URL you used might be the issue. In your case, ensure that the URL is correctly formatted. It should specify the database you want to connect to in the format: `jdbc:mysql://server/database?user=username`. 
+
+Since you're trying to access the `testDB`, your URL should look something like `jdbc:mysql://localhost/testDB?user=test`. Make sure you replace ""localhost"" with the actual server address if needed, and check that your database name is correct. This should help you see the tables in SQuirreL.","In SQuirreL, you can select the database to use by clicking on the drop down menu by Catalog: and selecting the database that you want to use."
+110,Lab 6 Setup,"It seems you are experiencing a connection issue with the database. Here are a few hints to troubleshoot the problem:
+
+1. **Check Database Credentials**: Ensure that the username and password are indeed correct for the database. Sometimes, small typographical errors can lead to connection failures.
+
+2. **Database URL**: Verify that the URL `jdbc:mysql://localhost/WorksOn` is correct. It should point to the right database server and database name.
+
+3. **User Privileges**: Make sure that the user has the necessary permissions to access the `WorksOn` database.
+
+4. **MySQL Server Status**: Ensure that the MySQL server is running and accessible on localhost.
+
+5. **JDBC Driver**: Confirm that you have the correct JDBC driver for MySQL included in your project.
+
+By checking these areas, you should be able to identify the source of the connection issue.","This usually means that you have a separate MySQL server running on your computer (i.e., if you had to change your port from 3306 to 3307 in docker-compose.yml). If this is the case, make sure you're connecting to the right URI (jdbc:mysql://localhost__:3307__/workson),
+
+If that doesn't correct the issue, I'd recommend joining a help session so we can debug the issue in real-time."
